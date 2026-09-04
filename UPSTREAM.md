@@ -31,6 +31,20 @@ keeping Ren's changes on a separate branch.
 - The private skills hub receives reviewed snapshots pinned to a clean commit;
   it is not the development repository.
 
+## Carried upstream fixes
+
+The variant branch cherry-picks the two commits from upstream pull request #96
+because the current `upstream/main` base does not yet contain them:
+
+- `bbf1471adc4145ac415096696c3020334756d2ac` — harden deploy asset copying
+  and Vercel invocation.
+- `a5ea228d5d75296685743c36934556ff469937b1` — bind PDF export to localhost
+  and block traversal.
+
+During a future rebase, drop the corresponding local cherry-picks if upstream
+already contains these commits or equivalent fixes, then rerun the shell and
+bundler tests before updating the recorded rebase base.
+
 ## GitHub relationship
 
 `ren2019/frontend-slides` was initially created as a private derived repository
