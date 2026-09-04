@@ -1,14 +1,14 @@
 {
   "name": "frontend-slides",
-  "version": "2.1.0",
-  "description": "Zero-dependency HTML presentation generator with safe presets, bold template-library styles, PPT conversion, and anti-AI-slop design philosophy.",
+  "version": "2.1.0-ren.1",
+  "description": "Create and package animation-rich HTML presentations with a fully embedded release workflow.",
   "skills": "./skills/",
   "author": {
-    "name": "zarazhangrui",
-    "url": "https://github.com/zarazhangrui"
+    "name": "Zara Zhang; Ren Zhen",
+    "url": "https://github.com/ren2019"
   },
-  "homepage": "https://github.com/zarazhangrui/frontend-slides",
-  "repository": "https://github.com/zarazhangrui/frontend-slides",
+  "homepage": "https://github.com/ren2019/frontend-slides",
+  "repository": "https://github.com/ren2019/frontend-slides",
   "license": "MIT",
-  "keywords": ["presentations", "slides", "html", "design", "powerpoint", "animations", "templates"]
+  "keywords": ["presentations", "slides", "html", "design", "powerpoint", "animations", "templates", "release-bundling"]
 }

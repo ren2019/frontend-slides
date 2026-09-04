@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "frontend-slides",
+  "version": "2.1.0-ren.1",
+  "description": "Create and package animation-rich HTML presentations with a fully embedded release workflow.",
+  "author": {
+    "name": "Zara Zhang; Ren Zhen"
+  },
+  "keywords": [
+    "presentations",
+    "slides",
+    "html",
+    "release-bundling"
+  ]
+}

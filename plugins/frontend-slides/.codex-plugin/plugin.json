@@ -1,0 +1,22 @@
+{
+  "name": "frontend-slides",
+  "version": "2.1.0-ren.1",
+  "description": "Create and package animation-rich HTML presentations with a fully embedded release workflow.",
+  "author": {
+    "name": "Zara Zhang; Ren Zhen"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Frontend Slides",
+    "shortDescription": "Build and package HTML presentations.",
+    "longDescription": "Creates fixed-stage HTML presentations, converts PowerPoint content, and packages manifest-listed local assets into one fully embedded release file.",
+    "developerName": "Zara Zhang; Ren Zhen",
+    "category": "Productivity",
+    "capabilities": [
+      "HTML presentation creation",
+      "PowerPoint content conversion",
+      "Deterministic release bundling"
+    ],
+    "defaultPrompt": "Create or improve an HTML presentation and deliver a verified, fully embedded release file."
+  }
+}
