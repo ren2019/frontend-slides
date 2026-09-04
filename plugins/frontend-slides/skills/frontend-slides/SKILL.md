@@ -9,7 +9,7 @@ Create zero-dependency, animation-rich HTML presentations that run entirely in t
 
 ## Core Principles
 
-1. **Zero Dependencies** — Single HTML files with inline CSS/JS. No npm, no build tools.
+1. **Zero-Dependency Release** — Deliver one HTML file with inline CSS/JS/assets. Authoring may use local assets when that is safer; package them with the manifest-driven builder before release.
 2. **Show, Don't Tell** — Generate visual previews, not abstract choices. People discover what they want by seeing it.
 3. **Distinctive Design** — No generic "AI slop." Every presentation must feel custom-crafted.
 4. **Progressive Disclosure** — Read lightweight style indexes first. For bold templates, use small preview cards for style previews and load the full `design.md` only after the user picks that template.
@@ -260,9 +260,11 @@ When converting PowerPoint files:
 
 ## Phase 5: Delivery
 
-1. **Clean up** — Delete `.frontend-slides/slide-previews/` if it exists
-2. **Open** — Use `open [filename].html` to launch in browser
-3. **Summarize** — Tell the user:
+1. **Package if needed** — If the editable source references local assets, read [release-packaging.md](release-packaging.md), create a pinned manifest, and use `scripts/bundle-html.py` to produce the fully embedded release. Temporary deck-specific adapters are allowed for manifest creation; keep the stable packaging step in the Skill script.
+2. **Verify** — Run the builder with `--check`, then open the release in a browser and check every slide. The release HTML, plus a separate speaker-script file when requested, is the delivery unit.
+3. **Clean up** — Delete `.frontend-slides/slide-previews/` if it exists
+4. **Open** — Use `open [filename].html` to launch in browser
+5. **Summarize** — Tell the user:
    - File location, style name, slide count
    - Navigation: Arrow keys, Space, swipe/tap if enabled
    - How to customize: `:root` CSS variables for colors, font link for typography, `.reveal` class for animations
@@ -376,5 +378,7 @@ This captures each slide as a screenshot and combines them into a PDF. Perfect f
 | [html-template.md](html-template.md)               | HTML structure, JS features, code quality standards                  | Phase 3 (generation)      |
 | [animation-patterns.md](animation-patterns.md)     | CSS/JS animation snippets and effect-to-feeling guide                | Phase 3 (generation)      |
 | [scripts/extract-pptx.py](scripts/extract-pptx.py) | Python script for PPT content extraction                             | Phase 4 (conversion)      |
+| [release-packaging.md](release-packaging.md)       | Manifest format and source/workspace/release boundaries              | Phase 5 (delivery)        |
+| [scripts/bundle-html.py](scripts/bundle-html.py)   | Deterministically embed manifest-listed local assets                 | Phase 5 (delivery)        |
 | [scripts/deploy.sh](scripts/deploy.sh)             | Deploy slides to Vercel for instant sharing                          | Phase 6 (sharing)         |
 | [scripts/export-pdf.sh](scripts/export-pdf.sh)     | Export slides to PDF                                                 | Phase 6 (sharing)         |
