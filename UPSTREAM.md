@@ -1,8 +1,8 @@
 # Upstream provenance
 
-This repository is a private derivative development source for Ren's maintained
+This repository is a public derivative development source for Ren's maintained
 `frontend-slides` variant. It preserves the public upstream history while
-keeping private changes on a separate branch.
+keeping Ren's changes on a separate branch.
 
 ## Source
 
@@ -33,7 +33,8 @@ keeping private changes on a separate branch.
 
 ## GitHub relationship
 
-GitHub does not provide a private fork of this public repository under the
-requested visibility. `ren2019/frontend-slides` is therefore a private derived
-repository with full upstream history and an explicit `upstream` remote, not a
-GitHub platform fork.
+`ren2019/frontend-slides` was initially created as a private derived repository
+because GitHub does not allow a fork of a public repository to have independent
+private visibility. It is now public, but remains an independent derived
+repository rather than a GitHub platform fork. It keeps full upstream history
+and an explicit `upstream` remote so the variant branch can continue to rebase.
